@@ -1,0 +1,108 @@
+:root {
+  --primary: #6b1d66;
+  --secondary: #8cc63f;
+  --accent: #0072bc;
+  --yellow: #fdd835;
+  --bg: #f4f4f9;
+  --text: #333;
+  --card-bg: white;
+  --border: #ccc;
+}
+
+/* DARK MODE VARIABLES */
+body.dark-mode {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --border: #444;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: var(--bg); color: var(--text); line-height: 1.6; transition: background 0.3s, color 0.3s; }
+
+/* TOP NAV (Feature 1, 5, 6) */
+.top-nav { background: #222; padding: 10px; display: flex; justify-content: flex-end; gap: 10px; }
+.nav-btn { background: var(--primary); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 14px; }
+.nav-btn:hover { background: var(--accent); }
+
+/* HEADER */
+.main-header { background: var(--primary); color: white; text-align: center; padding: 40px 20px; border-bottom: 5px solid var(--yellow); }
+.top-logo { width: 120px; height: 120px; border-radius: 50%; background: white; padding: 5px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.trust-name { font-size: 28px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px; }
+.trust-motto { font-size: 15px; font-style: italic; color: #f0e6f0; max-width: 800px; margin: 0 auto; }
+
+/* INTRO */
+.intro-section { background: var(--card-bg); padding: 30px 20px; max-width: 900px; margin: 20px auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; font-size: 15px; color: var(--text); }
+.intro-section p { margin-bottom: 10px; }
+
+/* IMPACT STATS (Feature 7) */
+.impact-stats { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px auto; max-width: 900px; padding: 0 20px; }
+.stat-box { background: var(--card-bg); padding: 20px 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 4px solid var(--secondary); flex: 1; min-width: 150px; }
+.stat-box h2 { color: var(--primary); font-size: 28px; margin-bottom: 5px; }
+.stat-box p { font-weight: bold; color: var(--text); }
+
+/* EVENTS (Feature 4) */
+.events-section { max-width: 900px; margin: 40px auto; padding: 0 20px; text-align: center; }
+.events-section h2 { color: var(--primary); margin-bottom: 20px; }
+.event-card { background: var(--card-bg); padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-left: 5px solid var(--accent); text-align: left; }
+.event-card h3 { color: var(--accent); margin-bottom: 10px; }
+.event-card p { color: var(--text); font-size: 14px; margin-bottom: 5px; }
+
+/* GALLERY */
+.gallery-section { max-width: 1000px; margin: 40px auto; padding: 0 20px; text-align: center; }
+.gallery-section h2 { color: var(--primary); margin-bottom: 20px; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.gallery-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border: 3px solid var(--card-bg); transition: transform 0.3s; }
+.gallery-img:hover { transform: scale(1.02); }
+
+/* FINANCE */
+.finance-section { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+.btn-pdf { background: var(--primary); color: white; padding: 12px 20px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+.btn-pdf:hover { background: #4a1447; }
+
+.balance-display { background: var(--primary); color: white; text-align: center; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border: 3px solid var(--yellow); }
+.balance-display h3 { font-size: 24px; margin: 0; letter-spacing: 1px; }
+
+.finance-container { display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; }
+.finance-box { flex: 1; min-width: 300px; background: var(--card-bg); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: var(--text); }
+.revenue-box { border-top: 6px solid var(--secondary); }
+.expenditure-box { border-top: 6px solid #e53935; }
+.finance-box h2 { text-align: center; margin-bottom: 15px; font-size: 20px; }
+.revenue-box h2 { color: var(--secondary); }
+.expenditure-box h2 { color: #e53935; }
+
+.finance-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.finance-form input, .finance-form select { padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; background: var(--bg); color: var(--text); }
+.btn-rev { background: var(--secondary); color: white; padding: 10px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+.btn-exp { background: #e53935; color: white; padding: 10px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+
+/* HIDDEN FOR NON-ADMIN */
+.admin-only { display: none; }
+
+/* Record List */
+.record-list { list-style: none; max-height: 300px; overflow-y: auto; margin-bottom: 15px; }
+.record-list li { display: flex; flex-direction: column; background: var(--bg); padding: 10px; margin-bottom: 8px; border-radius: 6px; font-size: 14px; border-left: 4px solid var(--border); }
+.revenue-box .record-list li { border-left-color: var(--secondary); }
+.expenditure-box .record-list li { border-left-color: #e53935; }
+.record-top { display: flex; justify-content: space-between; align-items: center; width: 100%; font-weight: bold; }
+.record-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; font-size: 12px; }
+.receipt-link { color: var(--accent); text-decoration: underline; cursor: pointer; }
+.delete-btn { background: none; border: none; color: #e53935; cursor: pointer; font-size: 16px; display: none; }
+
+.total-box { text-align: right; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 16px; }
+
+/* QR SECTION */
+.qr-section { text-align: center; background: var(--card-bg); padding: 40px 20px; margin-top: 40px; }
+.qr-section h2 { color: var(--primary); margin-bottom: 10px; }
+.qr-code { width: 250px; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 4px solid var(--primary); }
+
+footer { background: #222; color: white; text-align: center; padding: 20px; font-size: 14px; }
+
+/* WHATSAPP FLOATING BUTTON (Feature 2) */
+.whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; border-radius: 50px; text-align: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100; }
+.whatsapp-float img { width: 35px; margin-top: 12px; }
+
+@media (max-width: 768px) {
+  .finance-container { flex-direction: column; }
+  .top-nav { justify-content: center; }
+}
